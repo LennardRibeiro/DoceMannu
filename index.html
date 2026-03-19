@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doce Mannu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="catalogo">
+    <h1>Menu especial</h1>
+    <section class="grid">
+      <article class="card" data-link="https://wa.me/91992653155?text=Quero%20o%20Browninho">
+        <img src="./assets/browninho.jpg.jpeg" alt="Browninho">
+        <h2>Browninho</h2>
+        <p>Casca de chocolate nobre ao leite, recheado com pedaços de brownie, mousse de ninho e nutella.<br><br><strong>150g: R$95,00</strong></p>
+        <button type="button" class="buy-btn">Comprar</button>
+      </article>
+
+      <article class="card" data-link="https://wa.me/91992653155?text=Quero%20Chocolate%20ao%20Leite">
+        <img src="./assets/aoleite.jpg.jpeg" alt="Chocolate ao Leite">
+        <h2>Chocolate ao Leite</h2>
+        <p>Casca de chocolate nobre ao leite, recheado com brigadeiro cremoso de chocolate nobre ao leite e splits belga.<br><br><strong>150g: R$85,00</strong></p>
+        <button type="button" class="buy-btn">Comprar</button>
+      </article>
+
+      <article class="card" data-link="https://wa.me/91992653155?text=Quero%20Dark">
+        <img src="./assets/dark.jpg.jpeg" alt="Dark">
+        <h2>Dark</h2>
+        <p>Casca de chocolate nobre ao leite, recheado com brigadeiro cremoso de chocolate nobre meio amargo ao leite e splits belga.<br><strong>150g: R$85,00</strong></p>
+        <button type="button" class="buy-btn">Comprar</button>
+      </article>
+
+      <article class="card" data-link="https://wa.me/91992653155?text=Quero%20Creme%20Br%C3%BBl%C3%A9e">
+        <img src="./assets/creme.jpg.jpeg" alt="Creme Brûlée">
+        <h2>Creme Brûlée</h2>
+        <p>Casca de chocolate nobre ao leite, recheado com brigadeiro cremoso de creme brûlée.<br><br><br><strong>150g: R$85,00</strong></p>
+        <button type="button" class="buy-btn">Comprar</button>
+      </article>
+
+      <article class="card" data-link="https://wa.me/91992653155?text=Quero%20Trufado%20de%20Maracuj%C3%A1">
+        <img src="./assets/Truf-maracuja.jpg.jpeg" alt="Trufado de Maracujá">
+        <h2>Trufado de Maracujá</h2>
+        <p>Casca de chocolate nobre ao leite, recheado com brigadeiro trufado de maracujá e brigadeiro cremoso de chocolate nobre meio amargo.<br><strong>150g: R$85,00</strong></p>
+        <button type="button" class="buy-btn">Comprar</button>
+      </article>
+    </section>
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', event => {
+        const target = event.target;
+        if (target.closest('.buy-btn')) {
+          const url = card.dataset.link;
+          if (url) {
+            window.open(url, '_blank', 'noopener');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
