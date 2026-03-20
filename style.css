@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background-image: url("./assets/Bgd.jpeg");
+  background-image: url("./assets/bgteste2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -142,4 +142,34 @@ body {
   .card p {
     font-size: 0.92rem;
   }
+}
+
+/*social-links */
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  font-size: 24px;
+}
+
+#social-links a {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 16px;
+transition: background 0.4s;
+border-radius: 50%;
+
+}
+
+#social-links a:hover{
+background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+footer {
+  padding: 24px 0px;
+font-size: 10px;
+  text-align: center;
 }
