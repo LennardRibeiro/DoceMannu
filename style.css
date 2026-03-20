@@ -119,11 +119,17 @@ body {
 @media (max-width: 768px) {
   body {
     padding: 0.7rem;
+    background-size: contain; /* Mostra a imagem inteira sem cortar, ajustando ao espaço */
+    background-position: center top; /* Centraliza e prioriza o topo, onde os cards estão */
+    background-repeat: repeat;
   }
   .grid {
     grid-template-columns: 1fr;
     gap: 0.8rem;
   }
+  .card {
+  background: rgba(255, 255, 255, 0.9); /* Branco com 90% de opacidade, deixando o fundo visível */
+}
   .card img {
     height: 170px;
   }
@@ -141,6 +147,15 @@ body {
   }
   .card p {
     font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    min-height: 380px; /* Reduzir altura para caber melhor */
+  }
+  .buy-btn {
+    padding: 0.8rem; /* Botões maiores para toque fácil */
   }
 }
 
